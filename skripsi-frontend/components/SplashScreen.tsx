@@ -1,4 +1,4 @@
-import { Text, View, Animated } from 'react-native';
+import { View, Animated } from 'react-native';
 import React from 'react';
 
 const SplashScreen = () => {
@@ -19,12 +19,14 @@ const SplashScreen = () => {
   ]).start();
 
   return (
-    <View>
+    <View className='flex-1 justify-center items-center bg-titleGreen'>
       <Animated.Image
-        source={require('../assets/Splash/screen.png')}
+        source={require('../assets/Splash/logo.png')}
         style={[
           {
-            // transform: [{ scale: imageScale }, { translateY: imagePosition }],
+            transform: [{ scale: imageScale }, { translateY: imagePosition }],
+            width: 500,
+            height: 500,
           },
         ]}
       />
